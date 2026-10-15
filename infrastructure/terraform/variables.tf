@@ -98,10 +98,10 @@ variable "db_username" {
 }
 
 variable "db_password" {
-  description = "Master password for the RDS PostgreSQL instance (must be at least 8 characters, securely passed in production)"
+  description = "Master password for the RDS PostgreSQL instance. Must be at least 8 printable ASCII characters (no /, @, \", or spaces). Pass via TF_VAR_db_password env var or a gitignored terraform.tfvars file. Never hardcode here."
   type        = string
   sensitive   = true
-  default     = "CloudModX_Secure_2026!"
+  # No default — Terraform will prompt or fail if not supplied, preventing accidental use of a weak placeholder.
 }
 
 variable "db_backup_retention_period" {

@@ -1,0 +1,11 @@
+# terraform.tfvars.example
+# Copy this file to terraform.tfvars and fill in real values.
+# terraform.tfvars is gitignored and must NEVER be committed.
+#
+# Required — no default is provided:
+db_password = "CHANGE-ME-min-8-chars-no-slash-at-sign-or-quotes"
+
+# Optional overrides (defaults are set in variables.tf):
+# aws_region   = "ap-south-1"
+# environment  = "production"
+# project_name = "CloudModX"
